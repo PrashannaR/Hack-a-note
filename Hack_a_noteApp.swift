@@ -11,7 +11,9 @@ import SwiftUI
 struct Hack_a_noteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                AuthenticationView()
+            }.toolbar(.hidden, for: .navigationBar)
         }
     }
 }
