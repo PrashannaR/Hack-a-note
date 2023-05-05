@@ -13,6 +13,9 @@
 		5D840E3D2A055AA600E6EE04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E3C2A055AA600E6EE04 /* FirebaseAuth */; };
 		5D840E402A055ACC00E6EE04 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E3F2A055ACC00E6EE04 /* GoogleSignIn */; };
 		5D840E422A055ACC00E6EE04 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E412A055ACC00E6EE04 /* GoogleSignInSwift */; };
+		5D840E452A055DF500E6EE04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D840E442A055DF500E6EE04 /* Utilities.swift */; };
+		5D840E4A2A055F7D00E6EE04 /* AuthenticaationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D840E492A055F7D00E6EE04 /* AuthenticaationViewModel.swift */; };
+		5D840E4C2A05601400E6EE04 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D840E4B2A05601400E6EE04 /* AuthenticationManager.swift */; };
 		5DB974BC2A044FAD0037A799 /* Hack_a_noteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB974BB2A044FAD0037A799 /* Hack_a_noteApp.swift */; };
 		5DB974C02A044FAE0037A799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB974BF2A044FAE0037A799 /* Assets.xcassets */; };
 		5DB974C32A044FAE0037A799 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB974C22A044FAE0037A799 /* Preview Assets.xcassets */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D840E442A055DF500E6EE04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		5D840E492A055F7D00E6EE04 /* AuthenticaationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticaationViewModel.swift; sourceTree = "<group>"; };
+		5D840E4B2A05601400E6EE04 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		5DB974B82A044FAD0037A799 /* Hack-a-note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hack-a-note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB974BB2A044FAD0037A799 /* Hack_a_noteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack_a_noteApp.swift; sourceTree = "<group>"; };
 		5DB974BF2A044FAE0037A799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,15 +57,49 @@
 		5D840E3B2A055AA600E6EE04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D840E432A055DDF00E6EE04 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D840E442A055DF500E6EE04 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5D840E462A055F4400E6EE04 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5D840E4B2A05601400E6EE04 /* AuthenticationManager.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5D840E472A055F6800E6EE04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DB974CB2A0455900037A799 /* AuthenticationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D840E482A055F7100E6EE04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D840E492A055F7D00E6EE04 /* AuthenticaationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5DB974AF2A044FAD0037A799 = {
 			isa = PBXGroup;
 			children = (
-				5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */,
 				5DB974BB2A044FAD0037A799 /* Hack_a_noteApp.swift */,
+				5D840E462A055F4400E6EE04 /* Authentication */,
+				5D840E432A055DDF00E6EE04 /* Utilities */,
 				5DB974BA2A044FAD0037A799 /* Hack-a-note */,
 				5DB974B92A044FAD0037A799 /* Products */,
 				5D840E3B2A055AA600E6EE04 /* Frameworks */,
@@ -105,7 +145,8 @@
 		5DB974CA2A04557E0037A799 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				5DB974CB2A0455900037A799 /* AuthenticationView.swift */,
+				5D840E482A055F7100E6EE04 /* ViewModel */,
+				5D840E472A055F6800E6EE04 /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -210,7 +251,10 @@
 			files = (
 				5DB974BC2A044FAD0037A799 /* Hack_a_noteApp.swift in Sources */,
 				5DB974CC2A0455900037A799 /* AuthenticationView.swift in Sources */,
+				5D840E4C2A05601400E6EE04 /* AuthenticationManager.swift in Sources */,
+				5D840E4A2A055F7D00E6EE04 /* AuthenticaationViewModel.swift in Sources */,
 				5DB974CF2A0456250037A799 /* Color.swift in Sources */,
+				5D840E452A055DF500E6EE04 /* Utilities.swift in Sources */,
 				5DB974D32A04583C0037A799 /* Illustrations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

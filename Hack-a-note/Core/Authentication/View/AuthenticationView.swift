@@ -11,6 +11,9 @@ import GoogleSignInSwift
 import SwiftUI
 
 struct AuthenticationView: View {
+    
+    @StateObject private var vm = AuthenticaationViewModel()
+    
     var body: some View {
         ZStack {
             // background
@@ -32,6 +35,7 @@ struct AuthenticationView_Previews: PreviewProvider {
 // MARK: Extensions
 
 extension AuthenticationView {
+
     private func LoginView() -> some View {
         VStack {
             Spacer()
