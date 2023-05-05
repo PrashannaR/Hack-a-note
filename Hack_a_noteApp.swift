@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Hack_a_noteApp: App {
+    
+    init(){
+        FirebaseApp.configure()
+        print("Firebase Configured")
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
