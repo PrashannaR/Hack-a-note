@@ -11,9 +11,9 @@ import GoogleSignInSwift
 import SwiftUI
 
 struct AuthenticationView: View {
-    
     @StateObject private var vm = AuthenticaationViewModel()
-    
+    @Binding var showAuthView: Bool
+
     var body: some View {
         ZStack {
             // background
@@ -28,14 +28,15 @@ struct AuthenticationView: View {
 
 struct AuthenticationView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationView()
+        NavigationStack {
+            AuthenticationView(showAuthView: .constant(false))
+        }
     }
 }
 
 // MARK: Extensions
 
 extension AuthenticationView {
-
     private func LoginView() -> some View {
         VStack {
             Spacer()
@@ -58,12 +59,29 @@ extension AuthenticationView {
                     .foregroundColor(.white)
 
                 HStack {
-                    GoogleSignInButton(scheme: .light, style: .icon, state: .normal) {
-                    }
-                    .cornerRadius(10)
+                    GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .light, style: .icon, state: .normal)) {
+                        Task {
+                            do {
+                                try await vm.signInGoogle()
+                                showAuthView = false
+                            } catch {
+                                throw URLError(.cannotFindHost)
+                            }
+                        }
+                    }.cornerRadius(10)
                     Text("Sign In with Google")
                         .font(.headline)
                         .foregroundColor(.black)
+                }
+            }
+            .onTapGesture {
+                Task {
+                    do {
+                        try await vm.signInGoogle()
+                        showAuthView = false
+                    } catch {
+                        throw URLError(.cannotFindHost)
+                    }
                 }
             }
             .padding(.bottom, 40)

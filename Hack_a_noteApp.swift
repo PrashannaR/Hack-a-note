@@ -19,7 +19,7 @@ struct Hack_a_noteApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                AuthenticationView()
+                RootView()
             }.toolbar(.hidden, for: .navigationBar)
         }
     }

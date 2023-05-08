@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D132C9E2A097B0A00C10DF1 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132C9D2A097B0A00C10DF1 /* AuthDataResultModel.swift */; };
+		5D132CA02A097CC900C10DF1 /* GoogleSignInResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132C9F2A097CC900C10DF1 /* GoogleSignInResultModel.swift */; };
+		5D132CA22A097F3F00C10DF1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CA12A097F3F00C10DF1 /* RootView.swift */; };
+		5D132CA62A097FBF00C10DF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CA52A097FBF00C10DF1 /* HomeView.swift */; };
+		5D132CA92A09830100C10DF1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CA82A09830100C10DF1 /* HomeViewModel.swift */; };
 		5D840E352A05587C00E6EE04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */; };
 		5D840E382A055A1C00E6EE04 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E372A055A1C00E6EE04 /* FirebaseAnalytics */; };
 		5D840E3A2A055A1C00E6EE04 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E392A055A1C00E6EE04 /* FirebaseAnalyticsSwift */; };
@@ -25,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D132C9B2A09770300C10DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D132C9D2A097B0A00C10DF1 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		5D132C9F2A097CC900C10DF1 /* GoogleSignInResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInResultModel.swift; sourceTree = "<group>"; };
+		5D132CA12A097F3F00C10DF1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5D132CA52A097FBF00C10DF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5D132CA82A09830100C10DF1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D840E442A055DF500E6EE04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5D840E492A055F7D00E6EE04 /* AuthenticaationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticaationViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +65,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D132C9C2A097AF700C10DF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D132C9D2A097B0A00C10DF1 /* AuthDataResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D132CA32A097FB100C10DF1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D132CA72A0982F500C10DF1 /* ViewModel */,
+				5D132CA42A097FB700C10DF1 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D132CA42A097FB700C10DF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D132CA52A097FBF00C10DF1 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D132CA72A0982F500C10DF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D132CA82A09830100C10DF1 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5D840E3B2A055AA600E6EE04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5D840E4B2A05601400E6EE04 /* AuthenticationManager.swift */,
+				5D132C9F2A097CC900C10DF1 /* GoogleSignInResultModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -117,6 +162,7 @@
 		5DB974BA2A044FAD0037A799 /* Hack-a-note */ = {
 			isa = PBXGroup;
 			children = (
+				5D132C9B2A09770300C10DF1 /* Info.plist */,
 				5DB974D12A04582E0037A799 /* Components */,
 				5DB974CD2A0456190037A799 /* Extension */,
 				5DB974C92A04556A0037A799 /* Core */,
@@ -137,7 +183,9 @@
 		5DB974C92A04556A0037A799 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5D132CA32A097FB100C10DF1 /* Home */,
 				5DB974CA2A04557E0037A799 /* Authentication */,
+				5D132CA12A097F3F00C10DF1 /* RootView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -145,6 +193,7 @@
 		5DB974CA2A04557E0037A799 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				5D132C9C2A097AF700C10DF1 /* Model */,
 				5D840E482A055F7100E6EE04 /* ViewModel */,
 				5D840E472A055F6800E6EE04 /* View */,
 			);
@@ -249,9 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D132C9E2A097B0A00C10DF1 /* AuthDataResultModel.swift in Sources */,
 				5DB974BC2A044FAD0037A799 /* Hack_a_noteApp.swift in Sources */,
 				5DB974CC2A0455900037A799 /* AuthenticationView.swift in Sources */,
 				5D840E4C2A05601400E6EE04 /* AuthenticationManager.swift in Sources */,
+				5D132CA22A097F3F00C10DF1 /* RootView.swift in Sources */,
+				5D132CA62A097FBF00C10DF1 /* HomeView.swift in Sources */,
+				5D132CA02A097CC900C10DF1 /* GoogleSignInResultModel.swift in Sources */,
+				5D132CA92A09830100C10DF1 /* HomeViewModel.swift in Sources */,
 				5D840E4A2A055F7D00E6EE04 /* AuthenticaationViewModel.swift in Sources */,
 				5DB974CF2A0456250037A799 /* Color.swift in Sources */,
 				5D840E452A055DF500E6EE04 /* Utilities.swift in Sources */,
@@ -387,6 +441,7 @@
 				DEVELOPMENT_TEAM = G4XLFMNW66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hack-a-note/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +471,7 @@
 				DEVELOPMENT_TEAM = G4XLFMNW66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hack-a-note/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

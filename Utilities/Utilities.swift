@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 final class Utilities {
-    static let instance = Utilities() // singleton
+    static let shared = Utilities() // singleton
     private init() {}
-
+ 
     @MainActor
     func topViewController(controller: UIViewController? = nil) -> UIViewController? {
         let controller = controller ?? UIApplication.shared.keyWindow?.rootViewController
