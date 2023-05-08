@@ -18,17 +18,12 @@ struct HomeView: View {
         }.navigationTitle("Home View")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text("Exit")
-                        .onTapGesture {
-                            Task{
-                                do{
-                                    try vm.logout()
-                                    showAuthView = true
-                                }catch{
-                                    print("error logging out : \(error)")
-                                }
-                            }
-                        }
+                    NavigationLink {
+                        Profile(showAuthView: $showAuthView)
+                    } label: {
+                        Image(systemName: "person.fill")
+                    }
+
                 }
             }
 
