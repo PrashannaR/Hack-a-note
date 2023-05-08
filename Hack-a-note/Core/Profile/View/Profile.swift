@@ -38,12 +38,14 @@ struct Profile: View {
                         
 
         }
-        .navigationTitle("Profile View")
+        .navigationTitle("Profile")
     }
 }
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile(showAuthView: .constant(false))
+        NavigationStack {
+            Profile(showAuthView: .constant(false))
+        }
     }
 }
