@@ -14,8 +14,17 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            Image(systemName: "house.fill")
-        }.navigationTitle("Home View")
+            //background
+            Color.theme.background
+                .ignoresSafeArea()
+            
+            NavigationLink {
+                TeamView()
+            } label: {
+                Text("Form a team")
+            }
+
+        }.navigationTitle("Home")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
