@@ -15,8 +15,8 @@
 		5D132CAD2A0984BE00C10DF1 /* GoogleSignInHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CAC2A0984BE00C10DF1 /* GoogleSignInHelper.swift */; };
 		5D132CB22A0985EF00C10DF1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CB12A0985EF00C10DF1 /* Profile.swift */; };
 		5D132CB42A09873C00C10DF1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D132CB32A09873C00C10DF1 /* ProfileViewModel.swift */; };
-		5D77B0852A0AE2FB002538FF /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77B0842A0AE2FB002538FF /* TeamView.swift */; };
-		5D77B0872A0AE7AF002538FF /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77B0862A0AE7AF002538FF /* TeamViewModel.swift */; };
+		5D2616B82A14B419001F80DB /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2616B72A14B419001F80DB /* NoteView.swift */; };
+		5D2616BA2A14B422001F80DB /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2616B92A14B422001F80DB /* NoteViewModel.swift */; };
 		5D840E352A05587C00E6EE04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */; };
 		5D840E382A055A1C00E6EE04 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E372A055A1C00E6EE04 /* FirebaseAnalytics */; };
 		5D840E3A2A055A1C00E6EE04 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D840E392A055A1C00E6EE04 /* FirebaseAnalyticsSwift */; };
@@ -44,8 +44,8 @@
 		5D132CAC2A0984BE00C10DF1 /* GoogleSignInHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHelper.swift; sourceTree = "<group>"; };
 		5D132CB12A0985EF00C10DF1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5D132CB32A09873C00C10DF1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		5D77B0842A0AE2FB002538FF /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		5D77B0862A0AE7AF002538FF /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		5D2616B72A14B419001F80DB /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		5D2616B92A14B422001F80DB /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		5D840E342A05587C00E6EE04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D840E442A055DF500E6EE04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5D840E492A055F7D00E6EE04 /* AuthenticaationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticaationViewModel.swift; sourceTree = "<group>"; };
@@ -133,29 +133,29 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5D77B0812A0AE2E0002538FF /* Team */ = {
+		5D2616B42A14B3FE001F80DB /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				5D77B0832A0AE2ED002538FF /* ViewModel */,
-				5D77B0822A0AE2E7002538FF /* View */,
+				5D2616B62A14B40B001F80DB /* View */,
+				5D2616B52A14B405001F80DB /* ViewModel */,
 			);
-			path = Team;
+			path = Note;
 			sourceTree = "<group>";
 		};
-		5D77B0822A0AE2E7002538FF /* View */ = {
+		5D2616B52A14B405001F80DB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5D77B0842A0AE2FB002538FF /* TeamView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5D77B0832A0AE2ED002538FF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				5D77B0862A0AE7AF002538FF /* TeamViewModel.swift */,
+				5D2616B92A14B422001F80DB /* NoteViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D2616B62A14B40B001F80DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D2616B72A14B419001F80DB /* NoteView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D840E3B2A055AA600E6EE04 /* Frameworks */ = {
@@ -244,7 +244,7 @@
 		5DB974C92A04556A0037A799 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				5D77B0812A0AE2E0002538FF /* Team */,
+				5D2616B42A14B3FE001F80DB /* Note */,
 				5D132CA12A097F3F00C10DF1 /* RootView.swift */,
 				5D132CAE2A0985CD00C10DF1 /* Profile */,
 				5D132CA32A097FB100C10DF1 /* Home */,
@@ -368,12 +368,12 @@
 				5D840E4C2A05601400E6EE04 /* AuthenticationManager.swift in Sources */,
 				5D132CA22A097F3F00C10DF1 /* RootView.swift in Sources */,
 				5D132CAD2A0984BE00C10DF1 /* GoogleSignInHelper.swift in Sources */,
-				5D77B0872A0AE7AF002538FF /* TeamViewModel.swift in Sources */,
+				5D2616B82A14B419001F80DB /* NoteView.swift in Sources */,
+				5D2616BA2A14B422001F80DB /* NoteViewModel.swift in Sources */,
 				5D132CA62A097FBF00C10DF1 /* HomeView.swift in Sources */,
 				5D132CA02A097CC900C10DF1 /* GoogleSignInResultModel.swift in Sources */,
 				5D132CB42A09873C00C10DF1 /* ProfileViewModel.swift in Sources */,
 				5D132CA92A09830100C10DF1 /* HomeViewModel.swift in Sources */,
-				5D77B0852A0AE2FB002538FF /* TeamView.swift in Sources */,
 				5D840E4A2A055F7D00E6EE04 /* AuthenticaationViewModel.swift in Sources */,
 				5DB974CF2A0456250037A799 /* Color.swift in Sources */,
 				5D840E452A055DF500E6EE04 /* Utilities.swift in Sources */,

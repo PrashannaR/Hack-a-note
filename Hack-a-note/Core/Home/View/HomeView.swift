@@ -19,9 +19,9 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             NavigationLink {
-                TeamView()
+                NoteView()
             } label: {
-                Text("Form a team")
+                Text("Add a Note")
             }
 
         }.navigationTitle("Home")
