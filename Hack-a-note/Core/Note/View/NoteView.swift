@@ -19,26 +19,7 @@ struct NoteView: View {
                 .ignoresSafeArea()
 
             // foreground
-            VStack {
-                RoundedRectangle(cornerRadius: 30)
-                    .stroke(lineWidth: 1)
-                    .foregroundColor(Color.theme.darkPurple)
-                    .overlay(alignment: .leading, content: {
-                        overlayView()
-                    })
-                    .padding()
-
-                VStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(height: 60)
-                        .foregroundColor(Color.theme.darkPurple.opacity(0.69))
-                        .overlay(alignment: .center, content: {
-                            bottomView()
-                                .padding(.horizontal)
-                        })
-                        .padding()
-                }
-            }
+            foreground()
         }
         .sheet(isPresented: $vm.showSheet) {
             Text("hehe")
@@ -57,16 +38,20 @@ struct NoteView_Previews: PreviewProvider {
 // MARK: Extension
 
 extension NoteView {
-    private func overlayView() -> some View {
+    private func editTextOverlayView() -> some View {
         VStack {
-            Text("Title")
-                .font(.largeTitle)
-                .bold()
-                .frame(height: 30)
-                .foregroundColor(Color.theme.textColor)
+            TextField(text: $vm.titleText) {
+                Text("Title")
+                    .foregroundColor(Color.theme.textColor)
+            }
 
-            Text("Body")
-                .foregroundColor(Color.theme.textColor)
+            .font(.largeTitle)
+            .bold()
+
+            TextField(text: $vm.bodyText) {
+                Text("Body")
+                    .foregroundColor(Color.theme.textColor)
+            }
             Spacer()
         }.padding()
     }
@@ -90,5 +75,28 @@ extension NoteView {
             .scaledToFit()
             .foregroundColor(Color.white)
             .padding()
+    }
+    
+    private func foreground() -> some View{
+        VStack {
+            RoundedRectangle(cornerRadius: 30)
+                .stroke(lineWidth: 1)
+                .foregroundColor(Color.theme.darkPurple)
+                .overlay(alignment: .leading, content: {
+                    editTextOverlayView()
+                })
+                .padding()
+
+            VStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .frame(height: 60)
+                    .foregroundColor(Color.theme.darkPurple.opacity(0.69))
+                    .overlay(alignment: .center, content: {
+                        bottomView()
+                            .padding(.horizontal)
+                    })
+                    .padding()
+            }
+        }
     }
 }
