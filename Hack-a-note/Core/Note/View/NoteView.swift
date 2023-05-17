@@ -59,7 +59,7 @@ extension NoteView {
     private func bottomView() -> some View {
         HStack {
             Spacer()
-            icons(imageName: "checklist")
+            icons(imageName: "list.bullet.circle.fill")
             icons(imageName: "pencil.circle.fill")
             icons(imageName: "square.and.pencil.circle.fill")
                 .onTapGesture {
