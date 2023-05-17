@@ -28,13 +28,20 @@ struct NoteView: View {
                     })
                     .padding()
 
-                RoundedRectangle(cornerRadius: 20)
-                    .padding()
-                    .frame(height: 150)
-                    .foregroundColor(Color.theme.baseGreen)
-
-                    
+                VStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(height: 60)
+                        .foregroundColor(Color.theme.darkPurple.opacity(0.69))
+                        .overlay(alignment: .center, content: {
+                            bottomView()
+                                .padding(.horizontal)
+                        })
+                        .padding()
+                }
             }
+        }
+        .sheet(isPresented: $vm.showSheet) {
+            Text("hehe")
         }
     }
 }
@@ -62,5 +69,26 @@ extension NoteView {
                 .foregroundColor(Color.theme.textColor)
             Spacer()
         }.padding()
+    }
+
+    private func bottomView() -> some View {
+        HStack {
+            Spacer()
+            icons(imageName: "checklist")
+            icons(imageName: "pencil.circle.fill")
+            icons(imageName: "square.and.pencil.circle.fill")
+                .onTapGesture {
+                    vm.showSheet.toggle()
+                }
+            Spacer()
+        }
+    }
+
+    private func icons(imageName: String) -> some View {
+        Image(systemName: imageName)
+            .resizable()
+            .scaledToFit()
+            .foregroundColor(Color.white)
+            .padding()
     }
 }

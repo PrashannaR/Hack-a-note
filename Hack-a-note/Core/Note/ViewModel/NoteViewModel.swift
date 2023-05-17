@@ -9,4 +9,5 @@ import Foundation
 
 class NoteViewModel : ObservableObject{
     @Published var note: String = ""
+    @Published var showSheet : Bool = false
 }
