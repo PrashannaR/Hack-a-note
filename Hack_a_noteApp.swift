@@ -14,6 +14,8 @@ struct Hack_a_noteApp: App {
     init(){
         FirebaseApp.configure()
         print("Firebase Configured")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.black)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.black)]
     }
     
     var body: some Scene {

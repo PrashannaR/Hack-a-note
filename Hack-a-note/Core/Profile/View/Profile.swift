@@ -13,32 +13,38 @@ struct Profile: View {
     @StateObject var vm = ProfileViewModel()
     
     var body: some View {
-        List {
-            Button("Log Out") {
-                Task {
-                    do {
-                        try vm.logout()
-                        showAuthView = true
-                    } catch {
-                        print("Error: \(error)")
-                    }
-                }
-            }
+        ZStack {
             
-            Button("Delete Button", role: .destructive) {
-                Task{
-                    do{
-                        try await vm.delete()
-                        showAuthView = true
-                    }catch{
-                        print("Error \(error)")
+            Color.theme.background
+                .ignoresSafeArea()
+            
+            List {
+                Button("Log Out") {
+                    Task {
+                        do {
+                            try vm.logout()
+                            showAuthView = true
+                        } catch {
+                            print("Error: \(error)")
+                        }
                     }
                 }
-            }
-                        
+                
+                Button("Delete Button", role: .destructive) {
+                    Task{
+                        do{
+                            try await vm.delete()
+                            showAuthView = true
+                        }catch{
+                            print("Error \(error)")
+                        }
+                    }
+                }
+                            
 
+            }
+            .navigationTitle("Profile")
         }
-        .navigationTitle("Profile")
     }
 }
 

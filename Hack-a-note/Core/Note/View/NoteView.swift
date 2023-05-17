@@ -12,9 +12,15 @@ struct NoteView: View {
     @StateObject private var vm = NoteViewModel()
     
     var body: some View {
-        VStack{
-            Text("Add Note here")
-        }.navigationTitle("Add a Note")
+        ZStack {
+            
+            Color.theme.background
+                .ignoresSafeArea()
+            
+            VStack{
+                Text("Add Note here")
+            }.navigationTitle("Add a Note")
+        }
     }
 }
 
